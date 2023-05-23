@@ -3,4 +3,6 @@
     <string name="img">image</string>
     <string name="SignIn">Sign In</string>
     <string name="SignUp">Sign Up</string>
+    <string name="Welcome">WELCOME</string>
+    <string name="register">REGISTER</string>
 </resources>
