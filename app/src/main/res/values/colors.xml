@@ -10,4 +10,5 @@
 
     <color name="blue">#1BA1DD</color>
     <color name="transparent">#00000000</color>
+    <color name="background">#F0F0F0</color>
 </resources>
