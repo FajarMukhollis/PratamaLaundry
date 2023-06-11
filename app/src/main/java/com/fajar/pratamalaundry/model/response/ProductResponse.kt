@@ -13,7 +13,7 @@ data class ProductResponse(
     val `data`: ArrayList<Product>
 ) {
     data class Product(
-        @SerializedName("id_product")
+        @SerializedName("id_produk")
         val id_product: String,
 
         @SerializedName("nama_produk")
