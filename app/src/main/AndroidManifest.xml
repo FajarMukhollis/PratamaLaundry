@@ -14,41 +14,47 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".view.product.ProductActivity"
+            android:name=".presentation.history.HistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".view.profile.ProfileActivity"
+            android:name=".presentation.transaction.TransactionActivity"
             android:exported="false" />
         <activity
-            android:name=".view.register.RegisterActivity"
+            android:name=".presentation.product.ProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.register.RegisterActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".view.welcome.WelcomeActivity"
+            android:name=".presentation.welcome.WelcomeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".view.login.LoginActivity"
+            android:name=".presentation.login.LoginActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".view.main.MainActivity"
+            android:name=".presentation.main.MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".view.splashscreen.SplashActivity"
+            android:name=".presentation.splashscreen.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

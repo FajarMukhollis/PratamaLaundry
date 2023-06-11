@@ -8,11 +8,12 @@ import androidx.lifecycle.ViewModelProvider
 import com.fajar.pratamalaundry.di.Injection
 import com.fajar.pratamalaundry.model.preference.UserPreference
 import com.fajar.pratamalaundry.model.usecase.UserUseCase
-import com.fajar.pratamalaundry.view.login.LoginViewModel
-import com.fajar.pratamalaundry.view.main.MainViewModel
-import com.fajar.pratamalaundry.view.profile.ProfileViewModel
-import com.fajar.pratamalaundry.view.register.RegisterViewModel
-import com.fajar.pratamalaundry.view.splashscreen.SplashViewModel
+import com.fajar.pratamalaundry.presentation.history.HistoryViewModel
+import com.fajar.pratamalaundry.presentation.login.LoginViewModel
+import com.fajar.pratamalaundry.presentation.main.MainViewModel
+import com.fajar.pratamalaundry.presentation.profile.ProfileViewModel
+import com.fajar.pratamalaundry.presentation.register.RegisterViewModel
+import com.fajar.pratamalaundry.presentation.splashscreen.SplashViewModel
 
 class ViewModelFactory(
     private val userUseCase: UserUseCase,
@@ -35,7 +36,10 @@ class ViewModelFactory(
                 pref
             ) as T
             modelClass.isAssignableFrom(ProfileViewModel::class.java) -> ProfileViewModel(
-                userUseCase, pref
+                pref
+            ) as T
+            modelClass.isAssignableFrom(HistoryViewModel::class.java) -> HistoryViewModel(
+                pref
             ) as T
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

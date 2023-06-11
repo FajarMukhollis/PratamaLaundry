@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="@drawable/container">
+
+        <TextView
+            android:id="@+id/tv_product"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="produk"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:text="status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_harga"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:text="Harga :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:text="1000"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_harga"
+            app:layout_constraintStart_toEndOf="@+id/tv_harga"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product" />
+
+        <TextView
+            android:id="@+id/tv_status_bayar"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="LUNAS"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_harga" />
+
+        <TextView
+            android:id="@+id/tv_Berat"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="10"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_status_bayar" />
+
+        <TextView
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:text="Kg"
+            app:layout_constraintStart_toEndOf="@+id/tv_Berat"
+            app:layout_constraintTop_toTopOf="@+id/tv_Berat" />
+
+        <TextView
+            android:id="@+id/tv_order"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Terima :"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Berat" />
+
+        <TextView
+            android:id="@+id/tv_tgl_terima"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:text="10 Sep"
+            app:layout_constraintStart_toEndOf="@+id/tv_order"
+            app:layout_constraintTop_toTopOf="@+id/tv_order" />
+
+        <TextView
+            android:id="@+id/tv_selesai"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:text="Selesai :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order" />
+
+        <TextView
+            android:id="@+id/tv_tgl_selesai"
+            style="@style/textNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="12 Sep"
+            app:layout_constraintStart_toEndOf="@+id/tv_selesai"
+            app:layout_constraintTop_toTopOf="@+id/tv_selesai" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

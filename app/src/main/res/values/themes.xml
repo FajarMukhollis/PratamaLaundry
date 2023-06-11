@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.PratamaLaundry" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/blue</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/background</item>
         <!-- Secondary brand color. -->
@@ -26,6 +26,7 @@
         <item name="android:paddingEnd">10dp</item>
         <item name="android:background">@drawable/style_edit_text</item>
         <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/poppinsregular</item>
     </style>
 
     <style name="ButtonStyle">
@@ -45,5 +46,10 @@
 
     <style name="TitleTheme" parent="BoldBaseTheme">
         <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="textNormal" >
+        <item name="fontFamily">@font/poppinsregular</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 </resources>

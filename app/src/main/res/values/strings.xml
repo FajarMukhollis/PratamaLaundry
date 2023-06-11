@@ -31,4 +31,10 @@
     <string name="harga">harga</string>
     <string name="rupiah">Rp.</string>
     <string name="list_menu_service">Daftar Layanan</string>
+    <string name="history">Riwayat</string>
+    <string name="service_tran">Produk :</string>
+    <string name="berat">Berat (Kg)</string>
+    <string name="total_harga">Total Harga :</string>
+    <string name="pemesanan_laundry">Pemesanan Laundry</string>
+    <string name="product_jenis">Produk dan Jenis Layanan</string>
 </resources>
