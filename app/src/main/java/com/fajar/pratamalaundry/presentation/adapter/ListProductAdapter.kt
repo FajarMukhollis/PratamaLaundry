@@ -22,6 +22,7 @@ class ListProductAdapter(private val results : ArrayList<ProductResponse.Product
 
     override fun onBindViewHolder(holder: ViewHolderProduct, position: Int) {
         val result = results[position]
+
         holder.view.findViewById<TextView>(R.id.id_product).text = result.id_product
         holder.view.findViewById<TextView>(R.id.name_product).text = result.nama_produk
         holder.view.findViewById<TextView>(R.id.service).text = result.jenis_service
