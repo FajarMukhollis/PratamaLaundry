@@ -15,14 +15,14 @@ class ProductSpinnerAdapter(
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val view = super.getView(position, convertView, parent)
         val product = products[position]
-        (view as TextView).text = "${product.nama_produk} - ${product.jenis_service} - ${product.harga_produk}"
+        (view as TextView).text = "${product.id_product} - ${product.nama_produk} - ${product.jenis_service} - ${product.harga_produk}"
         return view
     }
 
     override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
         val view = super.getDropDownView(position, convertView, parent)
         val product = products[position]
-        (view as TextView).text = "${product.nama_produk} - ${product.jenis_service} - ${product.harga_produk}"
+        (view as TextView).text = "${product.id_product} - ${product.nama_produk} - ${product.jenis_service} - ${product.harga_produk}"
         return view
     }
 }

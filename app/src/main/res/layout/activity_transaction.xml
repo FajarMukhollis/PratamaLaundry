@@ -9,50 +9,50 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp">
+        android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/shape"
-            android:elevation="2dp"
-            android:padding="10dp"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/blue"
+            app:navigationIcon="@drawable/ic_arrow_back">
 
             <TextView
                 style="@style/TitleTheme"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/pemesanan_laundry"
-                android:textSize="25sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="@string/list_menu_service"
+                android:textColor="@color/white"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
 
         <TextView
             android:id="@+id/tv_service"
             style="@style/textNormal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:textSize="18sp"
             android:text="@string/service_tran"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
         <Spinner
             android:id="@+id/sp_service"
             style="@style/textNormal"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
             android:prompt="@string/product_jenis"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +64,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
             android:hint="@string/berat"
             android:selectAllOnFocus="true"
             app:layout_constraintEnd_toEndOf="parent"
@@ -84,9 +86,10 @@
         <TextView
             android:id="@+id/tvTotal"
             style="@style/textNormal"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="12dp"
             android:textSize="20sp"
             android:text="@string/total_harga"
             app:layout_constraintStart_toStartOf="parent"
@@ -98,11 +101,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
-            android:layout_marginTop="20dp"
-            android:textSize="20sp"
             android:text="@string/rupiah"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTotal"
             app:layout_constraintStart_toEndOf="@+id/tvTotal"
-            app:layout_constraintTop_toBottomOf="@+id/tv_berat" />
+            app:layout_constraintTop_toTopOf="@+id/tvTotal" />
 
         <TextView
             android:id="@+id/tv_Price"
@@ -110,12 +113,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="20dp"
-            android:textSize="20sp"
             android:text="40000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_Rp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_Rp"
-            app:layout_constraintTop_toBottomOf="@+id/tv_berat" />
+            app:layout_constraintTop_toTopOf="@+id/tv_Rp" />
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -123,7 +126,9 @@
             style="@style/ButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
             android:background="@drawable/btn_style"
             android:text="Pesan Sekarang"
             app:layout_constraintEnd_toEndOf="parent"

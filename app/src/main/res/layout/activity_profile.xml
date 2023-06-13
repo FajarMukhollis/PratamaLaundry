@@ -4,37 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="12dp"
+    android:layout_margin="12dp"
     tools:context=".presentation.profile.ProfileActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/shape"
-            android:elevation="2dp"
-            android:padding="10dp"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/blue"
+            app:navigationIcon="@drawable/ic_arrow_back">
 
             <TextView
                 style="@style/TitleTheme"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/customer_information"
-                android:textSize="25sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="@string/profile"
+                android:textColor="@color/white"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cardNama"
@@ -44,10 +40,9 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/container"
             android:padding="10dp"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
             <TextView
                 android:id="@+id/nama"

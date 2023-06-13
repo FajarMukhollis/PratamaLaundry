@@ -2,6 +2,7 @@ package com.fajar.pratamalaundry.presentation.transaction
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -29,6 +30,22 @@ class TransactionActivity : AppCompatActivity() {
         setContentView(_binding.root)
 
         showProductSpinner()
+        setActionBar()
+    }
+
+    private fun setActionBar() {
+        setSupportActionBar(_binding.toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun showProductSpinner() {

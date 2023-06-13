@@ -3,6 +3,7 @@ package com.fajar.pratamalaundry.presentation.history
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -37,7 +38,23 @@ class HistoryActivity : AppCompatActivity() {
         setViewModel()
         initRecyclerView()
         getHistory()
+        setActionBar()
 
+    }
+
+    private fun setActionBar() {
+        setSupportActionBar(_binding.toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun getHistory() {

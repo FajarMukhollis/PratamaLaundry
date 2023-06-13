@@ -2,6 +2,7 @@ package com.fajar.pratamalaundry.presentation.product
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,6 +26,21 @@ class ProductActivity : AppCompatActivity() {
 
         initRecyclerView()
         getDataFromApi()
+        setActionBar()
+    }
+    private fun setActionBar() {
+        setSupportActionBar(_binding.toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun getDataFromApi() {
@@ -57,7 +73,7 @@ class ProductActivity : AppCompatActivity() {
 
     private fun initRecyclerView() {
         listProductAdapter = ListProductAdapter(arrayListOf())
-        _binding.rvProduct.apply {
+        _binding.recylerProduct.apply {
             layoutManager = LinearLayoutManager(this@ProductActivity)
             val decoration = DividerItemDecoration(this@ProductActivity, DividerItemDecoration.VERTICAL)
             addItemDecoration(decoration)
