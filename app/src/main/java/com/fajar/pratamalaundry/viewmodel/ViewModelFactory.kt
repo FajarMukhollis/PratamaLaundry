@@ -14,6 +14,7 @@ import com.fajar.pratamalaundry.presentation.main.MainViewModel
 import com.fajar.pratamalaundry.presentation.profile.ProfileViewModel
 import com.fajar.pratamalaundry.presentation.register.RegisterViewModel
 import com.fajar.pratamalaundry.presentation.splashscreen.SplashViewModel
+import com.fajar.pratamalaundry.presentation.transaction.TransactionViewModel
 
 class ViewModelFactory(
     private val userUseCase: UserUseCase,
@@ -39,6 +40,9 @@ class ViewModelFactory(
                 pref
             ) as T
             modelClass.isAssignableFrom(HistoryViewModel::class.java) -> HistoryViewModel(
+                pref
+            ) as T
+            modelClass.isAssignableFrom(TransactionViewModel::class.java) -> TransactionViewModel(
                 pref
             ) as T
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

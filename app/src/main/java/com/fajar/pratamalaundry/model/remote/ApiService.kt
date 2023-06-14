@@ -7,6 +7,7 @@ import com.fajar.pratamalaundry.model.response.HistoryResponse
 import com.fajar.pratamalaundry.model.response.LoginResponse
 import com.fajar.pratamalaundry.model.response.ProductResponse
 import com.fajar.pratamalaundry.model.response.RegisterResponse
+import com.fajar.pratamalaundry.model.response.TransactionResponse
 import retrofit2.*
 import retrofit2.http.*
 
@@ -22,19 +23,20 @@ interface ApiService {
         @Body registerRequest: RegisterRequest
     ): Response<RegisterResponse>
 
-    @GET("product/product")
+    @GET("get_product")
     fun getAllProduct(): Call<ProductResponse>
 
-    @GET("user/transaksi")
+    @GET("history")
     fun getHistory(
         @Header("Authorization") token: String
     ): Call<HistoryResponse>
 
     @FormUrlEncoded
-    @POST("user/transaksi")
+    @POST("transaksi")
     fun postTransaction(
-        id_produk : String,
-        berat: String,
-        total_harga: String
-    )
+        @Header("Authorization") token: String,
+        @Field("id_produk") id_produk : String,
+        @Field("berat") berat: String,
+        @Field("total_harga") total_harga: String
+    ): Call<TransactionResponse>
 }
