@@ -28,7 +28,6 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 class TransactionActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityTransactionBinding
     private lateinit var transactionViewModel: TransactionViewModel
-    private lateinit var transactionAdapter: ProductSpinnerAdapter
     private lateinit var spinner: Spinner
 
     override fun onCreate(savedInstanceState: Bundle?) {
