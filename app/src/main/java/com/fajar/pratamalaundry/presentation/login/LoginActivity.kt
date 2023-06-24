@@ -24,6 +24,7 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var _binding: ActivityLoginBinding
     private lateinit var loginViewModel: LoginViewModel
+    private lateinit var loadingDialog: AlertDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,7 +68,8 @@ class LoginActivity : AppCompatActivity() {
                     setView(customBind.root)
                     setCancelable(false)
                 }
-                val loadingDialog = loadingDialogBuilder.create()
+                loadingDialog = loadingDialogBuilder.create()
+                loadingDialog.show()
 
                 loginViewModel.loginUser(email, password).observe(this) { result ->
                     when (result) {
@@ -75,7 +77,7 @@ class LoginActivity : AppCompatActivity() {
                         is Result.Success -> {
                             loadingDialog.dismiss()
                             loginViewModel.saveUser(result.data)
-                            loginViewModel.saveToken(result.data.token)
+//                            loginViewModel.saveToken(result.data.token)
                             loginViewModel.getToken().observe(this) { token ->
                                 println("ini token :$token")
                             }

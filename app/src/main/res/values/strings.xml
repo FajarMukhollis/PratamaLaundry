@@ -35,6 +35,7 @@
     <string name="service_tran">Produk :</string>
     <string name="berat">Berat (Kg)</string>
     <string name="total_harga">Total Harga :</string>
+    <string name="result">Rp: 0</string>
     <string name="pemesanan_laundry">Pemesanan Laundry</string>
     <string name="product_jenis">Produk dan Jenis Layanan</string>
     <string name="profile">Profile</string>

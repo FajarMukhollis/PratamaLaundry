@@ -76,6 +76,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_berat"
                 style="@style/InputTextStyle"
+                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -96,29 +97,17 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_berat" />
 
         <TextView
-            android:id="@+id/tv_Rp"
-            style="@style/textNormal"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:text="@string/rupiah"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/tvTotal"
-            app:layout_constraintStart_toEndOf="@+id/tvTotal"
-            app:layout_constraintTop_toTopOf="@+id/tvTotal" />
-
-        <TextView
             android:id="@+id/tv_Price"
             style="@style/textNormal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:text="40000"
+            android:layout_marginStart="40dp"
+            android:text="@string/result"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_Rp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTotal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tv_Rp"
-            app:layout_constraintTop_toTopOf="@+id/tv_Rp" />
+            app:layout_constraintStart_toEndOf="@+id/tvTotal"
+            app:layout_constraintTop_toTopOf="@+id/tvTotal" />
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -133,7 +122,7 @@
             android:text="Pesan Sekarang"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_Rp" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_Price" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
