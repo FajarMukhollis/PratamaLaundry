@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/container"
+        style="@style/itemRowcontainer"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_noPesanan"
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:text="No Pesanan"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_status" />
+
+        <TextView
+            android:id="@+id/tv_kategori"
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:text="kategori"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_noPesanan" />
+
+        <TextView
+            android:id="@+id/tv_strip"
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:text="-"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_kategori"
+            app:layout_constraintStart_toEndOf="@+id/tv_kategori"
+            app:layout_constraintTop_toTopOf="@+id/tv_kategori" />
+
+        <TextView
+            android:id="@+id/tv_product"
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:text="produk"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_strip"
+            app:layout_constraintStart_toEndOf="@+id/tv_strip"
+            app:layout_constraintTop_toTopOf="@+id/tv_strip" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="status"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_harga"
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:text="Harga :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:text="1000"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_harga"
+            app:layout_constraintStart_toEndOf="@+id/tv_harga"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product" />
+
+        <TextView
+            android:id="@+id/tv_status_bayar"
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:text="LUNAS"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_harga" />
+
+        <TextView
+            android:id="@+id/tv_Berat"
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:text="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_status_bayar" />
+
+        <TextView
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:text="Kg"
+            app:layout_constraintStart_toEndOf="@+id/tv_Berat"
+            app:layout_constraintTop_toTopOf="@+id/tv_Berat" />
+
+        <TextView
+            android:id="@+id/tv_order"
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:text="Terima :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Berat" />
+
+        <TextView
+            android:id="@+id/tv_tgl_terima"
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:text="10 Sep"
+            app:layout_constraintStart_toEndOf="@+id/tv_order"
+            app:layout_constraintTop_toTopOf="@+id/tv_order" />
+
+        <TextView
+            android:id="@+id/tv_selesai"
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:text="Selesai :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order" />
+
+        <TextView
+            android:id="@+id/tv_tgl_selesai"
+            style="@style/itemRowText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="12 Sep"
+            app:layout_constraintStart_toEndOf="@+id/tv_selesai"
+            app:layout_constraintTop_toTopOf="@+id/tv_selesai" />
+
+        <ImageView
+            android:id="@+id/btnPayment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/img"
+            android:src="@drawable/ic_payments"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnReport"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/img"
+            android:src="@drawable/ic_complaint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

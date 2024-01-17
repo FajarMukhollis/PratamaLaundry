@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".presentation.history.ConfirmPaymentActivity">
+
+    <TextView
+        android:id="@+id/metode_pembayaran"
+        style="@style/textNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Motode Pembayaran :"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1,2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/metode_pembayaran">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/gopay"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                style="@style/textNormal"
+                android:paddingStart="10dp"
+                android:text="Gopay"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/no_gopay"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                style="@style/textNormal"
+                android:gravity="right"
+                android:text="081234567890"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/ovo"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                style="@style/textNormal"
+                android:paddingStart="10dp"
+                android:text="OVO"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/no_ovo"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                style="@style/textNormal"
+                android:gravity="right"
+                android:text="081234567890"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/BCA"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                style="@style/textNormal"
+                android:paddingStart="10dp"
+                android:text="BCA"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/no_rek"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                style="@style/textNormal"
+                android:gravity="right"
+                android:text="1234567890"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+    </TableLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tv_payment"
+        style="@style/InputTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        tools:ignore="Autofill">
+
+        <ImageView
+            android:id="@+id/img_payment"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:contentDescription="@string/img"
+            android:src="@drawable/image_search" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_choose_image"
+            style="@style/ButtonStyle"
+            android:background="@drawable/btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="Pilih Gambar"
+            android:textSize="20sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        style="@style/ButtonStyle"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_style"
+        android:text="Kirim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_payment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

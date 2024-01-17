@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Pratama Laundry</string>
+    <string name="img">image</string>
+    <string name="getStart">Mulai</string>
+    <string name="desc">Pratama Laundry merupakan salah satu bisnis penjualan jasa pencucian dan setrika pakaian</string>
+    <string name="SignIn">Sign In</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="Welcome">WELCOME</string>
+    <string name="register">REGISTER</string>
+    <string name="transaction">Pesan Jasa</string>
+    <string name="welcome">Selamat Datang</string>
+    <string name="username">Nama Pelanggan</string>
+    <string name="empty_email">Email Kosong</string>
+    <string name="not_email">Bukan Email</string>
+    <string name="empty_pass">Password Kosong</string>
+    <string name="pass_less_than_eight">Password Kurang Dari 8 Digit</string>
+    <string name="failed_login">Login Gagal</string>
+    <string name="loading">Loading</string>
+    <string name="not_found">Email or Password Tidak ditemukan</string>
+    <string name="logout">Logout</string>
+    <string name="change_password">Ganti Password</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="address">Alamat</string>
+    <string name="no_telp">No Hp</string>
+    <string name="name">Nama</string>
+    <string name="customer_information">INFORMASI PELANGGAN</string>
+    <string name="service">Layanan</string>
+    <string name="number">1</string>
+    <string name="product_name">Nama Product</string>
+    <string name="harga">harga</string>
+    <string name="rupiah">Rp.</string>
+    <string name="list_menu_service">Daftar Layanan</string>
+    <string name="history">Riwayat</string>
+    <string name="service_tran">Produk :</string>
+    <string name="berat">Berat (Kg)</string>
+    <string name="total_harga">Total Harga :</string>
+    <string name="result">Rp: 0</string>
+    <string name="pemesanan_laundry">Pemesanan Laundry</string>
+    <string name="product_jenis">Produk dan Jenis Layanan</string>
+    <string name="profile">Profile</string>
+    <string name="detail_history">Detail Riwayat</string>
+    <string name="alamat">Alamat</string>
+    <string name="complaint">Komplen</string>
+    <string name="rules_asosiasi">Aturan Asosiai Laundry Indonesia</string>
+    <string name="rules_komplain">Aturan Layanan Komplain</string>
+    <string name="rules">Aturan</string>
+    <string name="description_rules">Pada Pratama Laudry, kami memiliki beberapa aturan yang harus dipatuhi oleh pelanggan. Aturan tersebut adalah sebagai berikut :</string>
+    <string name="category">Kategori Produk</string>
+    <string name="category_produk">Kategori Produk</string>
+
+    <string-array name="layanan">
+        <item>Datang Ke Toko</item>
+        <item>Antar Barang</item>
+    </string-array>
+</resources>
