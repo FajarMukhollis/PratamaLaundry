@@ -29,8 +29,8 @@ class DetailHistoryActivity : AppCompatActivity() {
 
     private lateinit var _binding: ActivityDetailHistoryBinding
     private lateinit var historyViewModel: HistoryViewModel
-//    private var baseUrl = "http://192.168.1.5/api-laundry"
-    private var baseUrl = "https://pratamalaundry.my.id/"
+    private var baseUrl = "http://192.168.1.14/api-laundry"
+//    private var baseUrl = "https://pratamalaundry.my.id/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

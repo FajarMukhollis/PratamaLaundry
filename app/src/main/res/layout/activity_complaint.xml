@@ -27,18 +27,44 @@
 
     </com.google.android.material.appbar.MaterialToolbar>
 
+
+    <TextView
+        android:id="@+id/tvComplaint"
+        style="@style/textNormal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:text="Jenis Complain"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Spinner
+        android:id="@+id/sp_complain"
+        style="@style/textNormal"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:prompt="@string/product_jenis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvComplaint" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tv_complaint"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Komplen"
+        android:hint="Komplain Lainnya"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/sp_complain"
         tools:ignore="Autofill">
 
         <com.google.android.material.textfield.TextInputEditText

@@ -48,9 +48,19 @@
     <string name="description_rules">Pada Pratama Laudry, kami memiliki beberapa aturan yang harus dipatuhi oleh pelanggan. Aturan tersebut adalah sebagai berikut :</string>
     <string name="category">Kategori:</string>
     <string name="category_produk">Kategori Produk</string>
+    <string name="lainnya">Lainnya</string>
 
     <string-array name="layanan">
         <item>Datang Ke Toko</item>
         <item>Antar Barang</item>
+    </string-array>
+
+    <string-array name="komplain">
+        <item>Pakaian Rusak atau Sobek</item>
+        <item>Warna Pakaian Luntur atau Pudar</item>
+        <item>Pakaian Tertukar</item>
+        <item>Kehilangan Barang</item>
+        <item>Bau Tidak Sedap</item>
+        <item>Lainnya</item>
     </string-array>
 </resources>
