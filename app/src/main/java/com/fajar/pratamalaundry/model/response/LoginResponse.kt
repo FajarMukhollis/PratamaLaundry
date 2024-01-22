@@ -33,6 +33,9 @@ data class DataUser(
     val email: String,
 
     @SerializedName("password")
-    val password: String
+    val password: String,
+
+    @SerializedName("fcm_pelanggan")
+    val fcm_pelanggan: String
 
 )

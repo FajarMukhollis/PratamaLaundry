@@ -13,12 +13,12 @@ import com.fajar.pratamalaundry.model.user.UserRegister
 class UserRepository(
     private val apiService: ApiService
 ) : IUserRepository {
-    override fun loginUser(email: String, pass: String): LiveData<Result<LoginResponse>> =
+    override fun loginUser(email: String, pass: String,  fcm: String): LiveData<Result<LoginResponse>> =
         liveData {
             emit(Result.Loading)
 
             try {
-                val response = apiService.loginUser(LoginRequest(email, pass))
+                val response = apiService.loginUser(LoginRequest(email, pass, fcm))
 
                 if (response.isSuccessful) {
                     val responseBody = response.body()

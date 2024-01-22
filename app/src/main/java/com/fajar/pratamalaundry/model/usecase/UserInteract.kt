@@ -9,8 +9,8 @@ import com.fajar.pratamalaundry.model.user.UserRegister
 class UserInteract(private val userRepository: IUserRepository):
     UserUseCase {
 
-    override fun loginUser(email: String, pass: String): LiveData<Result<LoginResponse>> =
-        userRepository.loginUser(email, pass)
+    override fun loginUser(email: String, pass: String, fcm: String): LiveData<Result<LoginResponse>> =
+        userRepository.loginUser(email, pass, fcm)
 
     override fun registerUser(
         nama_pelanggan: String,

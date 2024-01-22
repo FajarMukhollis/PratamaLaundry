@@ -12,9 +12,9 @@ import kotlinx.coroutines.launch
 class LoginViewModel(
     private val userUseCase: UserUseCase,
     private val userPreference: UserPreference
-): ViewModel() {
+) : ViewModel() {
 
-    fun loginUser(email: String, pass: String) = userUseCase.loginUser(email, pass)
+    fun loginUser(email: String, pass: String, fcm: String) = userUseCase.loginUser(email, pass, fcm)
 
     fun saveUser(userLogin: LoginResponse) {
         viewModelScope.launch {
@@ -32,4 +32,7 @@ class LoginViewModel(
 
     fun getToken() = userPreference.getToken().asLiveData()
 
+    suspend fun getTokenFcm(): String {
+        return userPreference.getTokenFcm()
+    }
 }

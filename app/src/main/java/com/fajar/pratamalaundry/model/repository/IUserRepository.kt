@@ -6,7 +6,7 @@ import com.fajar.pratamalaundry.model.result.Result
 import com.fajar.pratamalaundry.model.user.UserRegister
 
 interface IUserRepository {
-    fun loginUser(email: String, pass: String): LiveData<Result<LoginResponse>>
+    fun loginUser(email: String, pass: String, fcm: String): LiveData<Result<LoginResponse>>
 
     fun registerUser(
         nama_pelanggan: String,

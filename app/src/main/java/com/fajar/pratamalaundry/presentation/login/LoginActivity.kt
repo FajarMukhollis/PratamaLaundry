@@ -12,6 +12,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.datastore.preferences.core.Preferences
+import androidx.lifecycle.lifecycleScope
 import com.fajar.pratamalaundry.R
 import com.fajar.pratamalaundry.databinding.ActivityLoginBinding
 import com.fajar.pratamalaundry.databinding.DialogLoadingBinding
@@ -19,6 +20,7 @@ import com.fajar.pratamalaundry.viewmodel.ViewModelFactory
 import com.fajar.pratamalaundry.model.result.Result
 import com.fajar.pratamalaundry.presentation.main.MainActivity
 import com.fajar.pratamalaundry.presentation.register.RegisterActivity
+import kotlinx.coroutines.launch
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
@@ -40,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
             loginAction()
         }
 
-        _binding.btnRegister.setOnClickListener{
+        _binding.btnRegister.setOnClickListener {
             toRegister()
         }
 
@@ -64,6 +66,7 @@ class LoginActivity : AppCompatActivity() {
             password.isEmpty() -> passwordEditText.error = resources.getString(R.string.empty_pass)
             password.length < 8 -> passwordEditText.error =
                 resources.getString(R.string.pass_less_than_eight)
+
             else -> {
                 //loading dialog
                 val customBind = DialogLoadingBinding.inflate(layoutInflater)
@@ -72,25 +75,33 @@ class LoginActivity : AppCompatActivity() {
                     setCancelable(false)
                 }
                 val loadingDialog = loadingDialogBuilder.create()
+                lifecycleScope.launch {
+                    val fcm = loginViewModel.getTokenFcm()
+                    loginViewModel.loginUser(email, password, fcm).observe(this@LoginActivity) { result ->
+                        when (result) {
+                            is Result.Loading -> loadingDialog.show()
+                            is Result.Success -> {
+                                Toast.makeText(this@LoginActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
+                                loadingDialog.dismiss()
+                                loginViewModel.saveUser(result.data)
+                                Log.d(TAG, "loginAction: ${result.data}")
+                                toMain()
+                            }
 
-                loginViewModel.loginUser(email, password).observe(this) { result ->
-                    when (result) {
-                        is Result.Loading -> loadingDialog.show()
-                        is Result.Success -> {
-                            Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show()
-                            loadingDialog.dismiss()
-                            loginViewModel.saveUser(result.data)
-                            Log.d(TAG, "loginAction: ${result.data}")
-                            toMain()
-                        }
-                        is Result.Error -> {
-                            loadingDialog.dismiss()
-                            Toast.makeText(this, "Username dan Password Tidak diketahui", Toast.LENGTH_SHORT).show()
-                            Log.d(TAG, "loginAction: ${result.error}")
-                            errorAlert(result.error)
+                            is Result.Error -> {
+                                loadingDialog.dismiss()
+                                Toast.makeText(
+                                    this@LoginActivity,
+                                    "Username dan Password Tidak diketahui",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                Log.d(TAG, "loginAction: ${result.error}")
+                                errorAlert(result.error)
+                            }
                         }
                     }
                 }
+
             }
 
         }

@@ -1,22 +1,7 @@
 package com.fajar.pratamalaundry.model.remote
 
-import com.fajar.pratamalaundry.model.request.ComplaintRequest
-import com.fajar.pratamalaundry.model.request.LoginRequest
-import com.fajar.pratamalaundry.model.request.RegisterRequest
-import com.fajar.pratamalaundry.model.response.ChangePasswordResponse
-import com.fajar.pratamalaundry.model.response.ComplaintResponse
-import com.fajar.pratamalaundry.model.response.DetailHistoryResponse
-import com.fajar.pratamalaundry.model.response.GetCategoryResponse
-import com.fajar.pratamalaundry.model.response.HistoryResponse
-import com.fajar.pratamalaundry.model.response.LoginResponse
-import com.fajar.pratamalaundry.model.response.PaymentResponse
-import com.fajar.pratamalaundry.model.response.ProductResponse
-import com.fajar.pratamalaundry.model.response.ProdukByIdKategoriResponse
-import com.fajar.pratamalaundry.model.response.ProfileResponse
-import com.fajar.pratamalaundry.model.response.RegisterResponse
-import com.fajar.pratamalaundry.model.response.RulesAsosiasiResponse
-import com.fajar.pratamalaundry.model.response.RulesKomplainResponse
-import com.fajar.pratamalaundry.model.response.TransactionResponse
+import com.fajar.pratamalaundry.model.request.*
+import com.fajar.pratamalaundry.model.response.*
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.*
@@ -101,5 +86,9 @@ interface ApiService {
         @Path("id_kategori") idKategori: String
     ): Call<ProdukByIdKategoriResponse>
 
+    @POST("user/update_fcm")
+    fun updateFcm(
+        @Body updateFcmRequest: UpdateFcmRequest
+    ): Call<UpdateFcmResponse>
 
 }
