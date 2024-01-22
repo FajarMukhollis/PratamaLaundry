@@ -5,6 +5,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import androidx.datastore.preferences.core.*
 import com.fajar.pratamalaundry.model.user.UserModel
+import kotlinx.coroutines.flow.first
 
 class UserPreference private constructor(private val dataStore: DataStore<Preferences>) {
     fun getUser(): Flow<UserModel> {
@@ -27,9 +28,14 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         }
     }
 
-    suspend fun saveToken(token: String) {
+    suspend fun getTokenFcm(): String {
+        val preferences = dataStore.data.first()
+        return preferences[TOKEN_FCM] ?: ""
+    }
+
+    suspend fun saveTokenFcm(token: String) {
         dataStore.edit { preferences ->
-            preferences[STATE_TOKEN] = token
+            preferences[TOKEN_FCM] = token
         }
     }
 
@@ -69,6 +75,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         private val NOHP_KEY = stringPreferencesKey("nohp")
         private val STATE_KEY = booleanPreferencesKey("state")
         private val STATE_TOKEN = stringPreferencesKey("token")
+        private val TOKEN_FCM = stringPreferencesKey("token_fcm")
 
         fun getInstance(dataStore: DataStore<Preferences>): UserPreference {
             return INSTANCE ?: synchronized(this) {

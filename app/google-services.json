@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "56239150409",
+    "project_id": "laundry-98a45",
+    "storage_bucket": "laundry-98a45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56239150409:android:dd130120ba6983d599f698",
+        "android_client_info": {
+          "package_name": "com.fajar.pratamalaundry"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_bghDJK48d5tmqpG57Z1eVStb9QqUDdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56239150409:android:dce2e5412d22056499f698",
+        "android_client_info": {
+          "package_name": "com.fajar.pratamalaundry_admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_bghDJK48d5tmqpG57Z1eVStb9QqUDdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
