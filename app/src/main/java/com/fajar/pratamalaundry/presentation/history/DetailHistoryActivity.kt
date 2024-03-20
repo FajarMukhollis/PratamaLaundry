@@ -29,7 +29,8 @@ class DetailHistoryActivity : AppCompatActivity() {
 
     private lateinit var _binding: ActivityDetailHistoryBinding
     private lateinit var historyViewModel: HistoryViewModel
-    private var baseUrl = "http://192.168.1.14/api-laundry"
+
+    private var baseUrl = "http://192.168.1.9/api-laundry"
 //    private var baseUrl = "https://pratamalaundry.my.id/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,7 +64,7 @@ class DetailHistoryActivity : AppCompatActivity() {
         historyViewModel = ViewModelProvider(this, factory)[HistoryViewModel::class.java]
     }
 
-    private fun showData(id_transaksi:String) {
+    private fun showData(id_transaksi: String) {
         lifecycleScope.launch {
 
             showLoading(true)

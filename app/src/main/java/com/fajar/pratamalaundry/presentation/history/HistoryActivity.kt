@@ -18,6 +18,7 @@ import com.fajar.pratamalaundry.model.remote.ApiConfig
 import com.fajar.pratamalaundry.model.response.HistoryResponse
 import com.fajar.pratamalaundry.presentation.adapter.HistoryAdapter
 import com.fajar.pratamalaundry.viewmodel.ViewModelFactory
+import com.google.firebase.FirebaseApp
 import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback

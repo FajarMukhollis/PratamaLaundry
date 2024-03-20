@@ -64,6 +64,9 @@ class MainActivity : AppCompatActivity() {
         setViewModel()
         getNameCustomer()
 
+        if (intent.action == "com.fajar.pratamalaundry.NOTIFICATION_CLICK") {
+            toHistory()
+        }
         _binding.profile.setOnClickListener {
             toProfile()
         }

@@ -13,6 +13,7 @@ import com.fajar.pratamalaundry.model.remote.ApiConfig
 import com.fajar.pratamalaundry.model.request.UpdateFcmRequest
 import com.fajar.pratamalaundry.model.response.UpdateFcmResponse
 import com.fajar.pratamalaundry.presentation.history.HistoryActivity
+import com.fajar.pratamalaundry.presentation.main.MainActivity
 import com.fajar.pratamalaundry.presentation.main.MainViewModel
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
@@ -31,6 +32,7 @@ class NotificationService : FirebaseMessagingService() {
     }
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        Log.d(TAG, "Message data payload: ${remoteMessage.data}")
         remoteMessage.data.isNotEmpty().let {
             if (it) {
                 val title = remoteMessage.data["title"]
@@ -87,9 +89,9 @@ class NotificationService : FirebaseMessagingService() {
     }
 
     private fun sendNotification(title: String?, messageBody: String?) {
-        val intent = Intent(this, HistoryActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
+        intent.action = "com.fajar.pratamalaundry.NOTIFICATION_CLICK"
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-
         val pendingIntent = PendingIntent.getActivity(
             this, 0 /* Request code */, intent,
             PendingIntent.FLAG_ONE_SHOT or PendingIntent.FLAG_IMMUTABLE
