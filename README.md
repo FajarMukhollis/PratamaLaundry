@@ -16,7 +16,7 @@ Projek ini merupakan projek yang dibuat untuk memenuhi tugas akhir kuliah yang m
 ## SDLC
 - AGILE
 
-## Fitur - Fitur
+## Features
 - Login dan Register
 - Profile
 - Ganti Password
@@ -26,7 +26,6 @@ Projek ini merupakan projek yang dibuat untuk memenuhi tugas akhir kuliah yang m
 - Riwayat Pemesanan
 - Status Pemesanan
 - Push Notification (Setiap Status Pemesanan Berubah)
-
 
 
 ## Feedback
