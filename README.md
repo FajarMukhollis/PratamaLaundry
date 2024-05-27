@@ -8,10 +8,10 @@ Projek ini merupakan projek yang dibuat untuk memenuhi tugas akhir kuliah yang m
 - Bahasa Pemrograman Kotlin
 - Firebase (Push Notification)
 - Retrofit
+- SharedPreferences
 - Glide
 - MVVM
 - Restful API
-- MySQL
 
 ## SDLC
 - AGILE
